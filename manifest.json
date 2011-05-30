@@ -4,12 +4,12 @@
     "description": "Preview .md files in the browser",
     "background_page": "background.html",
     "permissions": [
-        "tabs", "<all_urls>"
+        "tabs", "http://*", "file://*/*"
     ],
     "content_scripts": [
         {
             "matches": [
-                "<all_urls>"
+                "http://*/", "file://*/*"
             ],
             "css": ["style.css"],
             "js": ["app.js"]
