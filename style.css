@@ -1,0 +1,17 @@
+@import url(http://fonts.googleapis.com/css?family=Droid+Serif:regular,italic,bold,bolditalic);
+
+.mdchrome-render-class {
+    width: 800px;
+    margin: 0 auto;
+    font-family: 'Georgia';
+}
+
+.mdchrome-rendere-class h1,
+.mdchrome-rendere-class h2
+.mdchrome-rendere-class h3,
+.mdchrome-rendere-class h4,
+.mdchrome-rendere-class h5,
+.mdchrome-rendere-class h6 {
+    font-family: 'Droid Serif';
+}
+
