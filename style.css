@@ -1,17 +1,14 @@
-@import url(http://fonts.googleapis.com/css?family=Droid+Serif:regular,italic,bold,bolditalic);
-
 .mdchrome-render-class {
     width: 800px;
     margin: 0 auto;
-    font-family: 'Georgia';
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, FreeSerif, serif;
+    font-size: 15px;
+    line-height: 22px;
 }
 
-.mdchrome-rendere-class h1,
-.mdchrome-rendere-class h2
-.mdchrome-rendere-class h3,
-.mdchrome-rendere-class h4,
-.mdchrome-rendere-class h5,
-.mdchrome-rendere-class h6 {
-    font-family: 'Droid Serif';
+.mdchrome-render-class code {
+    background: #f8f8ff;
+    border: 1px solid #dedede;
+    font-size: 12px;
+    padding: 0 0.2em;
 }
-
