@@ -7,6 +7,8 @@ MdChrome will parse it and display a pretty version of it (with basic CSS).
 
 You can double click the `MdChrome.crx` file to install a compressed version.
 
-Uses `ShowDown` to do the Markdown rendering.
+MdChrome uses [markdown-js][1] to do the Markdown rendering.
 
 BSD licensed.
+
+[1]: https://github.com/evilstreak/markdown-js
