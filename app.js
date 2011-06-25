@@ -1472,10 +1472,25 @@ function merge_text_nodes( jsonml ) {
 (function() {
 
   var mdext = ['.markdown', '.mdown', '.mkdn', '.md', '.mkd'];
-  var ext = function(str) {
-      return str.substr(str.length - 3, 3);
+  var url = window.location.href;
+  var numChildren = window.document.body.childElementCount;
+
+  var endswith = function(str, ends){
+    return str.length >= ends.length && str.substring(str.length - ends.length) === ends;
   };
 
+  var isMarkdown = function() {
+    for (var i=0; i<mdext.length; i++) {
+      if (endswith(url, mdext[i])) {
+          return true;
+      }
+    }
+    return false;
+  };
+
+  if (!isMarkdown())
+    return;
+  
   var injectStyle = function(link) {
     var  headID = document.getElementsByTagName('head')[0];
     var cssNode = document.createElement('link');
@@ -1485,12 +1500,6 @@ function merge_text_nodes( jsonml ) {
     cssNode.media = 'screen';
     headID.appendChild(cssNode);
   };
-
-  var url = window.location.href;
-  var numChildren = window.document.body.childElementCount;
-
-  if (mdext.indexOf(ext(url)) === -1)
-    return;
 
   var content = document.getElementsByTagName('pre');
   if (!content.length)
